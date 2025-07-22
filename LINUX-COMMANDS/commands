@@ -1,0 +1,111 @@
+mkdir folder/dir-------------create the directory
+cd folder/dir----------------change the directory
+ls---------------------------list the directory
+ls -l------------------------list the directory with details
+ls -a------------------------list the directory including hidden files
+ls -lh-----------------------list the directory with human-readable file sizes
+
+
+rmdir folder/dir-------------remove the directory
+rm -r folder/dir-------------remove the directory recursively
+rm -rf folder/dir-----------forcefully remove the directory recursively
+
+cp -r folder/dir folder/dir2--copy the directory recursively
+cp folder/dir folder/dir2----copy the directory
+
+mv folder/dir folder/dir2----move the directory
+mv folder/dir folder/dir2----move the directory recursively
+
+
+pwd--------------------------print the present working directory
+
+cd --------------------------go to the current directory
+cd .-------------------------go to the current directory
+cd ..------------------------go to the parent directory
+cd ~-------------------------go to the home directory
+cd /-------------------------go to the root directory
+
+cat file.txt-----------------display the file
+cat file.txt > file2.txt-------copy the content of file.txt to file2.txt
+
+echo "hello world" ----------display the text
+echo "hello world" > file.txt--------create the file and display the text
+echo "hello world" >> file.txt-------append the text to the file
+echo "hello world" > file.txt && echo "hello again" >> file.txt --create the file and display the text
+echo "hello world" > file.txt && echo "hello again" >> file.txt ------append the text to the file
+
+
+more file.txt----------------display the file with more options
+less file.txt----------------display the file with less options
+
+head file.txt ---------------display the first 10 lines of the file
+tail file.txt ---------------display the last 10 lines of the file
+
+head -n 5 file.txt -----------display the first 5 lines of the file
+tail -n 5 file.txt -----------display the last 5 lines of the file
+
+head -c 5 file.txt -----------display the first 5 characters of the file
+tail -c 5 file.txt -----------display the last 5 characters of the file
+
+wc file.txt -----------------display the number of lines, words, and characters in the file
+
+wc -l file.txt --------------display the number of lines in the file
+wc -w file.txt --------------display the number of words in the file
+wc -c file.txt --------------display the number of characters in the file
+
+find . -name "file.txt"------find the file
+
+vim file.txt----------------open the file in vim editor
+nano file.txt---------------open the file in nano editor
+vi file.txt-----------------open the file in vi editor
+
+
+touch file.txt --------------create the file
+
+rm file.txt------------------remove the file
+cp file.txt folder/dir-------copy the file  
+mv file.txt folder/dir-------move the file
+cat file.txt-----------------display the file   
+
+touch file.txt --------------create the file
+
+PWD--- PRESENT WORKING DIRECTORY
+
+cls ------------------------clear the screen
+clear ---------------------clear the screen
+
+history -------------------show the history
+history -c ----------------clear the history
+
+
+
+============
+IDE ------------- Integrated Development Environment
+CLI ------------- Command Line Interface
+GUI ------------- Graphical User Interface
+API ------------- Application Programming Interface
+SDK ------------- Software Development Kit
+DB ------------- Database
+OS ------------- Operating System
+WSL ------------- Windows Subsystem for Linux   
+
+================
+
+permissions -------------- file permissions
+group ------------------- group
+owner ------------------- owner
+user -------------------- user
+group owner ------------- group owner
+world ------------------- world
+everyone --------------- everyone
+root -------------------- root
+sudo -------------------- sudo
+su ---------------------- su
+sudo su ----------------- sudo su
+sudo su root ------------ sudo su root  
+
+
+windows ------- win
+linux --------- linux----ubuntu/centos/redhat/suse/debian/arch
+mac ----------- mac
+

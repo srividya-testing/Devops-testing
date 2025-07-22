@@ -1,0 +1,19 @@
+
+============== GIT COMMANDS (Version Control) ==============
+git status ---------------------- check repository status
+git add . ----------------------- stage all changes
+git add file_name --------------- stage specific file
+git commit -m "message" --------- commit changes
+git push origin branch_name ----- push to remote repository
+git pull origin branch_name ----- pull from remote repository
+git clone repository_url -------- clone repository
+git branch ---------------------- list branches
+git branch branch_name ---------- create new branch
+git checkout branch_name -------- switch to branch
+git merge branch_name ----------- merge branch
+git log ------------------------- view commit history
+git log --oneline --------------- compact commit history
+git diff ------------------------ show changes
+git reset HEAD~1 ---------------- undo last commit
+git stash ----------------------- stash changes
+git stash pop ------------------- apply stashed changes

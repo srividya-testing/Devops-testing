@@ -1,0 +1,289 @@
+
+============== SYSTEM MONITORING & PERFORMANCE ==============
+top -------------------------- display running processes (real-time)
+htop ------------------------- enhanced top command with better UI
+ps aux ---------------------- list all running processes
+ps -ef ---------------------- list all processes with full details
+ps -aux | grep process_name -- find specific process
+kill PID -------------------- kill process by process ID
+kill -9 PID ----------------- forcefully kill process
+killall process_name -------- kill all processes by name
+pkill process_name ---------- kill processes by pattern
+pgrep process_name ---------- find process ID by name
+
+free ------------------------- display memory usage
+free -h --------------------- display memory usage in human-readable format
+df -------------------------- display disk space usage
+df -h ---------------------- display disk space in human-readable format
+du -------------------------- display directory space usage
+du -sh folder_name ---------- display folder size summary
+du -h --max-depth=1 --------- show size of subdirectories
+
+uptime ---------------------- show system uptime and load
+w --------------------------- show who is logged in and what they're doing
+who ------------------------- show who is logged in
+last ------------------------ show last logins
+uname -a -------------------- display system information
+lscpu ----------------------- display CPU information
+lsmem ----------------------- display memory information
+lsblk ----------------------- display block devices
+
+============== LOG ANALYSIS & MONITORING ==============
+tail -f /var/log/syslog ----- follow system logs in real-time
+tail -f /var/log/auth.log --- follow authentication logs
+journalctl ------------------ view systemd journal logs
+journalctl -f --------------- follow journal logs in real-time
+journalctl -u service_name -- view logs for specific service
+journalctl --since "1 hour ago" -- view logs from last hour
+journalctl --until "2023-01-01" -- view logs until specific date
+
+grep "error" /var/log/syslog - search for errors in logs
+grep -i "error" log_file ---- case-insensitive search
+grep -r "pattern" /path/ ---- recursive search in directory
+grep -n "pattern" file ------ show line numbers with matches
+grep -c "pattern" file ------ count matching lines
+grep -v "pattern" file ------ show lines that don't match
+
+awk '{print $1}' file ------- print first column
+sed 's/old/new/g' file ------ replace text in file
+sort file ------------------- sort lines in file
+uniq file ------------------- show unique lines
+cut -d: -f1 /etc/passwd ----- extract first field (username)
+
+============== NETWORK COMMANDS ==============
+netstat -tuln --------------- show listening ports
+netstat -tulnp -------------- show listening ports with process names
+ss -tuln -------------------- modern replacement for netstat
+ss -tulnp ------------------- show listening ports with process info
+lsof -i :port_number -------- show what's using specific port
+lsof -i :80 ----------------- show what's using port 80
+
+ping hostname --------------- test connectivity
+ping -c 4 hostname ---------- ping 4 times only
+traceroute hostname --------- trace route to destination
+nslookup hostname ----------- DNS lookup
+dig hostname ---------------- DNS lookup (more detailed)
+curl -I https://example.com - check HTTP headers
+wget https://example.com ---- download files from web
+
+iptables -L ----------------- list firewall rules
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT -- allow SSH
+ufw status ------------------ Ubuntu firewall status
+ufw enable ------------------ enable Ubuntu firewall
+
+============== SERVICE MANAGEMENT (SystemD) ==============
+systemctl status service_name ---- check service status
+systemctl start service_name ----- start service
+systemctl stop service_name ------ stop service
+systemctl restart service_name --- restart service
+systemctl reload service_name ---- reload service configuration
+systemctl enable service_name ---- enable service at boot
+systemctl disable service_name --- disable service at boot
+systemctl list-units ------------- list all loaded units
+systemctl list-unit-files -------- list all unit files
+systemctl daemon-reload ---------- reload systemd configuration
+
+service service_name status ------ legacy service command
+service service_name start ------- start service (legacy)
+service service_name stop -------- stop service (legacy)
+
+============== ARCHIVE & COMPRESSION ==============
+tar -czf archive.tar.gz folder/ --- create compressed archive
+tar -xzf archive.tar.gz ----------- extract compressed archive
+tar -tzf archive.tar.gz ----------- list contents of archive
+zip -r archive.zip folder/ -------- create zip archive
+unzip archive.zip --------------- extract zip archive
+gzip file.txt ------------------- compress file
+gunzip file.txt.gz -------------- decompress file
+
+============== FILE PERMISSIONS & OWNERSHIP ==============
+chmod 755 file ------------------ change file permissions
+chmod +x script.sh -------------- make file executable
+chmod -x script.sh -------------- remove execute permission
+chmod u+x script.sh ------------- add execute for user
+chmod g-w script.sh ------------- remove write for group
+chmod o-r script.sh ------------- remove read for others
+
+chown user:group file ----------- change ownership
+chown -R user:group folder/ ----- recursively change ownership
+chgrp group file ---------------- change group ownership
+umask --------------------------- show default permissions
+
+ls -la -------------------------- show detailed file permissions
+stat file ---------------------- show detailed file information
+
+============== ENVIRONMENT VARIABLES ==============
+env ----------------------------- show all environment variables
+echo $PATH ---------------------- display PATH variable
+export VAR=value ---------------- set environment variable
+export PATH=$PATH:/new/path ----- add to PATH
+unset VAR ----------------------- remove environment variable
+source ~/.bashrc ---------------- reload bash configuration
+. ~/.bashrc --------------------- reload bash configuration (short)
+
+which command ------------------- show path of command
+whereis command ----------------- show location of command
+type command -------------------- show type of command
+
+============== CRON JOBS & SCHEDULING ==============
+crontab -l ---------------------- list current user's cron jobs
+crontab -e ---------------------- edit current user's cron jobs
+crontab -r ---------------------- remove all cron jobs
+sudo crontab -u user -l --------- list another user's cron jobs
+
+# Cron format: minute hour day month day-of-week command
+# 0 2 * * * /path/to/script.sh -- run daily at 2 AM
+# */5 * * * * /path/to/script.sh - run every 5 minutes
+# 0 9 * * 1 /path/to/script.sh -- run every Monday at 9 AM
+
+at now + 1 hour ----------------- schedule one-time job
+at 2:30 PM ---------------------- schedule job for specific time
+atq ----------------------------- list scheduled jobs
+atrm job_id --------------------- remove scheduled job
+
+============== PACKAGE MANAGEMENT ==============
+# Ubuntu/Debian (APT)
+apt update ---------------------- update package list
+apt upgrade --------------------- upgrade all packages
+apt install package_name -------- install package
+apt remove package_name --------- remove package
+apt purge package_name ---------- remove package and config
+apt search package_name --------- search for package
+apt list --installed ----------- list installed packages
+dpkg -l ------------------------- list installed packages
+dpkg -i package.deb ------------- install .deb package
+
+# CentOS/RHEL (YUM/DNF)
+yum update ---------------------- update packages (CentOS 7)
+yum install package_name -------- install package
+yum remove package_name --------- remove package
+yum search package_name --------- search for package
+dnf update ---------------------- update packages (CentOS 8+)
+dnf install package_name -------- install package
+rpm -qa ------------------------- list installed packages
+rpm -ivh package.rpm ------------ install .rpm package
+
+============== DOCKER COMMANDS (DevOps Essential) ==============
+docker ps ----------------------- list running containers
+docker ps -a -------------------- list all containers
+docker images ------------------- list all images
+docker pull image_name ---------- pull image from registry
+docker run -d image_name -------- run container in background
+docker run -it image_name bash -- run container interactively
+docker exec -it container_id bash - access running container
+docker stop container_id -------- stop container
+docker rm container_id ---------- remove container
+docker rmi image_id ------------- remove image
+docker logs container_id -------- view container logs
+docker logs -f container_id ----- follow container logs
+docker build -t tag_name . ------ build image from Dockerfile
+docker-compose up --------------- start services
+docker-compose down ------------- stop services
+
+============== GIT COMMANDS (Version Control) ==============
+git status ---------------------- check repository status
+git add . ----------------------- stage all changes
+git add file_name --------------- stage specific file
+git commit -m "message" --------- commit changes
+git push origin branch_name ----- push to remote repository
+git pull origin branch_name ----- pull from remote repository
+git clone repository_url -------- clone repository
+git branch ---------------------- list branches
+git branch branch_name ---------- create new branch
+git checkout branch_name -------- switch to branch
+git merge branch_name ----------- merge branch
+git log ------------------------- view commit history
+git log --oneline --------------- compact commit history
+git diff ------------------------ show changes
+git reset HEAD~1 ---------------- undo last commit
+git stash ----------------------- stash changes
+git stash pop ------------------- apply stashed changes
+
+============== SSH & REMOTE ACCESS ==============
+ssh user@hostname --------------- connect to remote server
+ssh -i keyfile user@hostname ---- connect using private key
+ssh-keygen ---------------------- generate SSH key pair
+ssh-copy-id user@hostname ------- copy public key to server
+scp file user@host:/path -------- copy file to remote server
+scp user@host:/path/file . ------ copy file from remote server
+rsync -av source/ dest/ --------- synchronize directories
+rsync -av -e ssh source/ user@host:/dest/ - sync over SSH
+
+============== TMUX & SCREEN (Session Management) ==============
+tmux ---------------------------- start new tmux session
+tmux new-session -s session_name  create named session
+tmux list-sessions -------------- list all sessions
+tmux attach -t session_name ----- attach to session
+tmux detach --------------------- detach from session (Ctrl+b d)
+tmux kill-session -t session_name  kill session
+
+screen -------------------------- start new screen session
+screen -S session_name ---------- create named screen session
+screen -ls ---------------------- list screen sessions
+screen -r session_name ---------- reattach to session
+# Ctrl+a d to detach from screen session
+
+============== TEXT PROCESSING & ANALYSIS ==============
+wc -l file ---------------------- count lines
+wc -w file ---------------------- count words
+wc -c file ---------------------- count characters
+sort file ----------------------- sort lines alphabetically
+sort -n file -------------------- sort numerically
+sort -r file -------------------- reverse sort
+uniq file ----------------------- show unique lines
+uniq -c file -------------------- count unique lines
+
+awk '{print NF}' file ----------- count fields per line
+awk '{print $NF}' file ---------- print last field
+sed 's/old/new/g' file ---------- replace text globally
+tr '[:lower:]' '[:upper:]' < file  convert to uppercase
+paste file1 file2 --------------- merge files side by side
+
+============== SYSTEM CLEANUP & MAINTENANCE ==============
+apt autoremove ------------------ remove unused packages (Ubuntu)
+apt autoclean ------------------- clean package cache
+yum clean all ------------------- clean yum cache (CentOS)
+find /tmp -type f -atime +7 -delete  delete files older than 7 days
+find . -name "*.log" -size +100M ---- find large log files
+find . -type f -name "core" -delete - delete core dump files
+
+history -c ---------------------- clear command history
+> ~/.bash_history --------------- clear bash history file
+unset HISTFILE ------------------ disable history for session
+
+============== PERFORMANCE TUNING ==============
+iostat -------------------------- I/O statistics
+iotop --------------------------- I/O usage by process
+vmstat -------------------------- virtual memory statistics
+sar -u 5 ----------------------- CPU usage every 5 seconds
+sar -r 5 ----------------------- memory usage every 5 seconds
+sar -d 5 ----------------------- disk activity every 5 seconds
+nload --------------------------- network load monitor
+iftop --------------------------- network interface monitor
+
+sysctl -a ---------------------- show kernel parameters
+sysctl vm.swappiness ------------ show swap usage tendency
+echo 3 > /proc/sys/vm/drop_caches - clear page cache
+
+============== BACKUP & RECOVERY ==============
+rsync -avz source/ backup/ ------ backup with compression
+rsync -avz --delete source/ backup/  mirror backup
+dd if=/dev/sda of=backup.img ---- create disk image
+dd if=backup.img of=/dev/sdb ---- restore disk image
+mount /dev/sdb1 /mnt ------------ mount filesystem
+umount /mnt --------------------- unmount filesystem
+fsck /dev/sdb1 ------------------ check filesystem
+
+============== REALTIME MONITORING ALIASES ==============
+alias ll='ls -la'
+alias la='ls -la'
+alias l='ls -l'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias grep='grep --color=auto'
+alias ports='netstat -tulanp'
+alias meminfo='free -m -l -t'
+alias psmem='ps auxf | sort -nr -k 4'
+alias pscpu='ps auxf | sort -nr -k 3'
+alias cpuinfo='lscpu'
+alias diskspace='df -h'
