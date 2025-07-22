@@ -1,0 +1,28 @@
+
+create a new repository on the command line
+mkdir DEVOPS-REALTIME-PROJECTS
+cd DEVOPS-REALTIME-PROJECTS
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"  
+git remote add origin https://github.com/ajaymindtech/DEVOPS-REALTIME-PROJECTS.git
+git push -u origin master
+
+
+
+
+echo "# DEVOPS-REALTIME-PROJECTS" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/ajaymindtech/DEVOPS-REALTIME-PROJECTS.git
+git push -u origin master
+
+
+push an existing repository from the command line
+
+git remote add origin https://github.com/ajaymindtech/DEVOPS-REALTIME-PROJECTS.git
+git branch -M master
+git push -u origin master
