@@ -1,0 +1,34 @@
+docker -- version
+  789  docker --version
+  790  docker info
+  791  docker ps
+  792  docker ps-a
+  793  docker ps -a
+  794  docker images'
+  795  exit
+  796  docker images
+  797  ls
+  798  cd docker > Docker\Docker Documents.txt
+  799  pwd
+  800  exit
+  801  ls
+  802  docker > Docker-practice-1
+  803  clear
+  804  pwd
+  805  ls
+  806  docker info
+  807  docker ps
+  808  docker ps -a
+  809  docker --version
+  810  docker
+  811  docker stop 6b169114cfee
+  812  docker rm e4f82cdc511b
+  813  docker images
+  814  docker rmi ec153840d1e6
+  815  docker run -d -p 80:80 nginx
+  816  docker run hello-world
+  817  ps
+  818  docker ps
+  819  docker run -d -p 80:80 nginx
+  820  docker run -d -p 82:82 nginx
+  821  docker run -d -p 80:80 nginx

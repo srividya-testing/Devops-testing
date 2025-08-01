@@ -1,0 +1,57 @@
+What is Docker?
+Docker is an open-source platform that enables developers to package, distribute, and run applications in isolated environments called containers.
+Container: A runtime instance of a Docker image. 
+Image: A read-only template that contains the application and its dependencies. Images are used to create containers.
+Docker Engine: The core component that runs containers. It includes the Docker daemon, CLI, and runtime.
+To build the image:
+
+docker build -t my-python-app .
+
+To run a container from the image:
+docker run -d -p 80:80 my-python-app
+Why Use Docker?
+Portability: Docker containers can run on any system that has Docker installed, ensuring consistency across development, testing, and production environments.
+Scalability: Docker supports scaling applications horizontally by running multiple containers.
+Efficiency: Containers are lightweight and start quickly compared to virtual machines.
+Docker Terminology: Containers, Images, and More
+Container: A running instance of a Docker image.
+Image: A read-only template used to create containers.
+Dockerfile: A text document that contains all the commands
+Docker Daemon: The background service running on the host that manages
+Docker Client: The command-line tool that allows users to interact with the Docker daemon.
+Docker Registry: A repository for Docker images. Docker Hub is a public registry, while private registries can be set up for internal use.
+ Docker Architecture Overview
+Docker uses a client-server architecture. The Docker client communicates with the Docker daemon
+Components:
+
+Docker Client: The command-line interface (CLI) that users interact with.
+Docker Daemon: The background service that processes API requests from the client.
+Docker Registry: Stores and distributes Docker images.
+Docker Objects: Containers, images, networks, and volumes.
+
+Chapter 3: Docker CLI Basics
+The Docker Command Line Interface (CLI) is the primary tool for interacting with the Docker daemon.
+Docker CLI: The command-line interface for Docker.
+Docker Daemon: The background service that processes API requests from the Docker CLI.
+Docker Commands: Commands used to interact with Docker objects (e.g., docker run, docker build).
+Basic Docker Commands
+docker run: Create and start a container from an image.
+docker ps: List running containers.
+docker stop: Stop a running container.
+docker rm: Remove a container.
+docker images: List available images.
+docker rmi: Remove an image.
+Running Your First Container
+Running a container involves creating a container from an image and starting it. The docker run command is used for this purpose.
+
+Key Concepts:
+
+Image: A read-only template used to create containers.
+Container: A runtime instance of an image.
+docker run: Command to create and start a container.
+docker start: Start a stopped container.
+docker stop: Stop a running container.
+docker restart: Restart a container.
+docker rm: Remove a container.
+docker inspect: Get detailed information about a container.
+
