@@ -32,3 +32,202 @@ docker -- version
   819  docker run -d -p 80:80 nginx
   820  docker run -d -p 82:82 nginx
   821  docker run -d -p 80:80 nginx
+  ---------------------------------------------------------------------------------------------------------------
+  PS D:\vidya devops practical\DEVOPS-REALTIME-PROJECTS> wsl
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ pwd
+/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ doker info
+Command 'doker' not found, did you mean:
+  command 'docker' from snap docker (28.1.1+1)
+  command 'docker' from deb docker.io (26.1.3-0ubuntu1~24.04.1)
+  command 'docker' from deb podman-docker (4.9.3+ds1-1ubuntu0.2)
+See 'snap info <snapname>' for additional versions.
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker --version
+Docker version 28.3.2, build 578ccf6
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker info
+Client:
+ Version:    28.3.2
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  ai: Docker AI Agent - Ask Gordon (Docker Inc.)
+    Version:  v1.6.0
+    Path:     /usr/local/lib/docker/cli-plugins/docker-ai
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.25.0-desktop.1
+    Path:     /usr/local/lib/docker/cli-plugins/docker-buildx
+  cloud: Docker Cloud (Docker Inc.)
+    Version:  v0.4.2
+    Path:     /usr/local/lib/docker/cli-plugins/docker-cloud
+  compose: Docker Compose (Docker Inc.)
+    Version:  v2.38.2-desktop.1
+    Path:     /usr/local/lib/docker/cli-plugins/docker-compose
+  debug: Get a shell into any image or container (Docker Inc.)
+    Version:  0.0.41
+    Path:     /usr/local/lib/docker/cli-plugins/docker-debug
+  desktop: Docker Desktop commands (Docker Inc.)
+    Version:  v0.1.11
+    Path:     /usr/local/lib/docker/cli-plugins/docker-desktop
+  extension: Manages Docker extensions (Docker Inc.)
+    Version:  v0.2.29
+    Path:     /usr/local/lib/docker/cli-plugins/docker-extension
+  init: Creates Docker-related starter files for your project (Docker Inc.)
+    Version:  v1.4.0
+    Path:     /usr/local/lib/docker/cli-plugins/docker-init
+  mcp: Docker MCP Plugin (Docker Inc.)
+    Version:  v0.9.9
+    Path:     /usr/local/lib/docker/cli-plugins/docker-mcp
+  model: Docker Model Runner (EXPERIMENTAL) (Docker Inc.)
+    Version:  v0.1.33
+    Path:     /usr/local/lib/docker/cli-plugins/docker-model
+  sbom: View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc.)
+    Version:  0.6.0
+    Path:     /usr/local/lib/docker/cli-plugins/docker-sbom
+  scout: Docker Scout (Docker Inc.)
+    Version:  v1.18.1
+    Path:     /usr/local/lib/docker/cli-plugins/docker-scout
+
+Server:
+ Containers: 6
+  Running: 2
+  Paused: 0
+  Stopped: 4
+ Images: 2
+ Server Version: 28.3.2
+ Storage Driver: overlayfs
+  driver-type: io.containerd.snapshotter.v1
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Discovered Devices:
+  cdi: docker.com/gpu=webgpu
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 nvidia runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 05044ec0a9a75232cad458027ca83437aae3f4da
+ runc version: v1.2.5-0-g59923ef
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.6.87.2-microsoft-standard-WSL2
+ Operating System: Docker Desktop
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 8
+ Total Memory: 3.75GiB
+ Name: docker-desktop
+ ID: 1d5f5531-6de8-4e8b-a619-53755938bfac
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ HTTP Proxy: http.docker.internal:3128
+ HTTPS Proxy: http.docker.internal:3128
+ No Proxy: hubproxy.docker.internal
+ Labels:
+  com.docker.desktop.address=unix:///var/run/docker-cli.sock
+ Experimental: false
+ Insecure Registries:
+  hubproxy.docker.internal:5555
+  ::1/128
+  127.0.0.0/8
+ Live Restore Enabled: false
+
+WARNING: DOCKER_INSECURE_NO_IPTABLES_RAW is set
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ 
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND                  CREATED        STATUS                        PORTS                        NAMES
+f44f63618e9f   nginx         "/docker-entrypoint.…"   15 hours ago   Created                                                    stoic_dijkstra
+60ac510f489d   nginx         "/docker-entrypoint.…"   15 hours ago   Exited (255) 25 minutes ago   80/tcp, 0.0.0.0:82->82/tcp   trusting_edison
+57c9e99cad36   nginx         "/docker-entrypoint.…"   15 hours ago   Created                                                    wonderful_swanson
+e0af83f18023   hello-world   "/hello"                 15 hours ago   Exited (0) 15 hours ago                                    trusting_feistel
+0373ac1b8a6c   nginx         "/docker-entrypoint.…"   15 hours ago   Exited (255) 25 minutes ago   0.0.0.0:80->80/tcp           agitated_torvalds
+6b169114cfee   hello-world   "/hello"                 23 hours ago   Exited (0) 23 hours ago                                    determined_boyd
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker images
+REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
+nginx         latest    84ec966e61a8   2 weeks ago    279MB
+hello-world   latest    ec153840d1e6   6 months ago   20.4kB
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker rmi 84ec966e61a8
+Error response from daemon: conflict: unable to delete 84ec966e61a8 (must be forced) - image is being used by stopped container 0373ac1b8a6c
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker stop f44f63618e9f
+f44f63618e9f
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker rmi 84ec966e61a8
+Error response from daemon: conflict: unable to delete 84ec966e61a8 (must be forced) - image is being used by stopped container 0373ac1b8a6c
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker stop 0373ac1b8a6c
+0373ac1b8a6c
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker rmi 84ec966e61a8
+Error response from daemon: conflict: unable to delete 84ec966e61a8 (must be forced) - image is being used by stopped container 0373ac1b8a6c
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND                  CREATED        STATUS                        PORTS                        NAMES
+f44f63618e9f   nginx         "/docker-entrypoint.…"   15 hours ago   Created                                                    stoic_dijkstra      
+60ac510f489d   nginx         "/docker-entrypoint.…"   15 hours ago   Exited (255) 31 minutes ago   80/tcp, 0.0.0.0:82->82/tcp   trusting_edison     
+57c9e99cad36   nginx         "/docker-entrypoint.…"   15 hours ago   Created                                                    wonderful_swanson   
+e0af83f18023   hello-world   "/hello"                 15 hours ago   Exited (0) 15 hours ago                                    trusting_feistel    
+0373ac1b8a6c   nginx         "/docker-entrypoint.…"   15 hours ago   Exited (255) 31 minutes ago   0.0.0.0:80->80/tcp           agitated_torvalds   
+6b169114cfee   hello-world   "/hello"                 23 hours ago   Exited (0) 23 hours ago                                    determined_boyd     
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker rm 0373ac1b8a6c
+0373ac1b8a6c
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ 
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker images
+REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
+nginx         latest    84ec966e61a8   2 weeks ago    279MB
+hello-world   latest    ec153840d1e6   6 months ago   20.4kB
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker rmi 84ec966e61a8
+Error response from daemon: conflict: unable to delete 84ec966e61a8 (must be forced) - image is being used by stopped container 60ac510f489d
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND                  CREATED        STATUS                        PORTS                        NAMES
+f44f63618e9f   nginx         "/docker-entrypoint.…"   15 hours ago   Created                                                    stoic_dijkstra
+60ac510f489d   nginx         "/docker-entrypoint.…"   15 hours ago   Exited (255) 33 minutes ago   80/tcp, 0.0.0.0:82->82/tcp   trusting_edison
+57c9e99cad36   nginx         "/docker-entrypoint.…"   15 hours ago   Created                                                    wonderful_swanson
+e0af83f18023   hello-world   "/hello"                 15 hours ago   Exited (0) 15 hours ago                                    trusting_feistel
+6b169114cfee   hello-world   "/hello"                 24 hours ago   Exited (0) 24 hours ago                                    determined_boyd
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker stop nginx
+Error response from daemon: No such container: nginx
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker stop f44f63618e9f 60ac510f489d 57c9e99cad36 
+f44f63618e9f
+60ac510f489d
+57c9e99cad36
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND                  CREATED        STATUS                        PORTS                        NAMES
+f44f63618e9f   nginx         "/docker-entrypoint.…"   15 hours ago   Created                                                    stoic_dijkstra      
+60ac510f489d   nginx         "/docker-entrypoint.…"   15 hours ago   Exited (255) 34 minutes ago   80/tcp, 0.0.0.0:82->82/tcp   trusting_edison     
+57c9e99cad36   nginx         "/docker-entrypoint.…"   15 hours ago   Created                                                    wonderful_swanson   
+e0af83f18023   hello-world   "/hello"                 15 hours ago   Exited (0) 15 hours ago                                    trusting_feistel    
+6b169114cfee   hello-world   "/hello"                 24 hours ago   Exited (0) 24 hours ago                                    determined_boyd     
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND                  CREATED        STATUS                        PORTS                        NAMES
+f44f63618e9f   nginx         "/docker-entrypoint.…"   15 hours ago   Created                                                    stoic_dijkstra      
+60ac510f489d   nginx         "/docker-entrypoint.…"   15 hours ago   Exited (255) 35 minutes ago   80/tcp, 0.0.0.0:82->82/tcp   trusting_edison     
+57c9e99cad36   nginx         "/docker-entrypoint.…"   15 hours ago   Created                                                    wonderful_swanson   
+e0af83f18023   hello-world   "/hello"                 15 hours ago   Exited (0) 15 hours ago                                    trusting_feistel    
+6b169114cfee   hello-world   "/hello"                 24 hours ago   Exited (0) 24 hours ago                                    determined_boyd     
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker rm  f44f63618e9f 60ac510f489d 57c9e99cad36
+f44f63618e9f
+60ac510f489d
+57c9e99cad36
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ 
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND    CREATED        STATUS                    PORTS     NAMES
+e0af83f18023   hello-world   "/hello"   15 hours ago   Exited (0) 15 hours ago             trusting_feistel
+6b169114cfee   hello-world   "/hello"   24 hours ago   Exited (0) 24 hours ago             determined_boyd
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker images
+REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
+nginx         latest    84ec966e61a8   2 weeks ago    279MB
+hello-world   latest    ec153840d1e6   6 months ago   20.4kB
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ docker rmi 84ec966e61a8
+Untagged: nginx:latest
+Deleted: sha256:84ec966e61a8c7846f509da7eb081c55c1d56817448728924a87ab32f12a72fb
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ 

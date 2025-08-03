@@ -53,5 +53,105 @@ docker start: Start a stopped container.
 docker stop: Stop a running container.
 docker restart: Restart a container.
 docker rm: Remove a container.
-docker inspect: Get detailed information about a container.
+docker inspect: Get detailed information about a container
+-------------------------------------------------------------------------
+Chapter 4: Docker Images
+
+Key Concepts:
+
+Base Image: An image that has no parent image, usually containing the operating system.
+Layer: Each instruction in a Dockerfile creates a new layer in the image.
+Repository: A collection of related Docker images, often with different tags.
+Tag: A label applied to an image to identify it, often indicating a version.
+
+docker pull python:3.9-slim
+This command pulls a Python base image tagged 3.9-slim from Docker Hub.
+
+ Creating Your Own Docker Images:
+
+  own Docker images involves writing a Dockerfile
+  Key Concepts:
+
+Dockerfile: A text file containing instructions for building a Docker image.
+FROM: Specifies the base image.
+RUN: Executes commands in a new layer on top of the current image.
+COPY: Copies new files or directories into the image.
+CMD: Provides defaults for an executing container.
+Practical Example:
+Create a Dockerfile for a simple Node.js application:
+
+# Use an official Node.js runtime as a parent image
+FROM node:14
+# Set the working directory in the container
+WORKDIR /app
+# Copy the current directory contents into the container at /app
+COPY . /app
+# Install any needed packages specified in package.json
+RUN npm install
+# Make port 3000 available to the world outside this container
+EXPOSE 3000
+# Define environment variable
+ENV NAME World
+# Run app.js when the container launches
+CMD ["node", "app.js"]
+
+ Dockerfile Basics:
+
+ Each instruction in a Dockerfile creates a new layer in the image.
+
+Key Concepts:
+
+FROM: Specifies the base image.
+WORKDIR: Sets the working directory for subsequent instructions.
+COPY: Copies files or directories into the container.
+RUN: Executes commands in a new layer.
+CMD: Specifies the default command to run when the container starts.
+
+Here’s a simple Dockerfile for a Python application:
+
+# Use an official Python runtime as a parent image
+FROM python:3.9-slim
+# Set the working directory in the container
+WORKDIR /app
+# Copy the current directory contents into the container at /app
+COPY . /app
+# Install any needed packages specified in requirements.txt
+RUN pip install -r requirements.txt
+# Make port 80 available to the world outside this container
+EXPOSE 80
+# Define environment variable
+ENV NAME World
+# Run app.py when the container launches
+CMD ["python", "app.py"]
+
+Best Practices for Writing Dockerfiles:
+
+Key Concepts:
+
+Minimize Layers: Combine commands to reduce the number of layers.
+Use .dockerignore: Exclude unnecessary files and directories from the build context.
+Avoid Latest Tag: Use specific version tags to avoid unexpected changes.
+Use Multi-Stage Builds: Separate build and runtime stages to create smaller images.
+
+Building and Tagging Images
+Building an image involves converting a Dockerfile into a Docker image. Tagging helps identify and version your images.
+
+Key Concepts:
+
+docker build: Command to build an image from a Dockerfile.
+Tag: A label applied to an image to identify it, often indicating a version.
+Repository: A collection of related Docker images.
+
+Build an image from a Dockerfile and tag it:
+
+docker build -t my-python-app:1.0 .
+Explanation:
+
+docker build: Command to build the image.
+-t my-python-app:1.0: Tags the image with the name my-python-app and version 1.0.
+.: Specifies the build context (current directory).
+To list the built image:
+
+docker images
+
 
