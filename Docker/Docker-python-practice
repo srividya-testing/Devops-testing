@@ -1,0 +1,18 @@
+955  docker > app.py
+  956  docker > Dockerfile
+  957  ls
+  959  docker build -t flask-sample-app .
+  960  docker images
+  961  docker run -p 5000:5000 flask-sample-app
+  962  docker build -t flask-sample-app .
+  963  docker images
+  964  docker build -t flask-sample-app .
+  965  docker images
+  966  docker run -p 5000:5000 flask-sample-app
+  967  docker build -t flask-sample-app .
+  968  docker images
+  969  docker run -p 5000:5000 flask-sample-app
+  970  docker build -t flask-sample-app .
+  971  docker run -p 5000:5000 flask-sample-app
+  9
+  

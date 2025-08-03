@@ -231,3 +231,40 @@ rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ 
 Untagged: nginx:latest
 Deleted: sha256:84ec966e61a8c7846f509da7eb081c55c1d56817448728924a87ab32f12a72fb
 rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ 
+
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ 
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ pwd
+/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ ls
+DEVOPS-REALTIME-PROJECTS  Docker  GIT-GITHUB  LINUX-COMMANDS  README.md
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ ls -ltr
+total 0
+drwxrwxrwx 1 rinivas rinivas 512 Jul 24 09:54 GIT-GITHUB
+drwxrwxrwx 1 rinivas rinivas 512 Jul 24 09:54 LINUX-COMMANDS
+-rwxrwxrwx 1 rinivas rinivas 111 Jul 27 14:55 README.md
+drwxrwxrwx 1 rinivas rinivas 512 Aug  1 13:40 Docker
+drwxrwxrwx 1 rinivas rinivas 512 Aug  1 14:05 DEVOPS-REALTIME-PROJECTS
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ git remote -v
+origin  https://github.com/srividya-testing/Devops-testing.git (fetch)
+origin  https://github.com/srividya-testing/Devops-testing.git (push)
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ git remote
+origin
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ git branch
+* main
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ git add Docker
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ git commit -m"adding filed"
+[main 821b378] adding filed
+ 2 files changed, 301 insertions(+), 2 deletions(-)
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ git push origin main
+Username for 'https://github.com': srividya
+Password for 'https://srividya@github.com': 
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 5.07 KiB | 136.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/srividya-testing/Devops-testing.git
+   a79a3ce..821b378  main -> main
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ 
