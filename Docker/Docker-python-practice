@@ -71,3 +71,81 @@ Press CTRL+C to quit
  * Debugger PIN: 143-119-427
 172.17.0.1 - - [04/Aug/2025 05:51:31] "GET / HTTP/1.1" 200 -
 172.17.0.1 - - [04/Aug/2025 05:51:31] "GET /favicon.ico HTTP/1.1" 404 -
+----------------------------------------------------------------------------------
+
+pushing pythin image to docker hub through CLI:
+
+
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ pwd
+/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS$ cd docker
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/docker$ ls
+'Docker Documents.txt'   Docker-practice-1   Docker-python-practice   Dockerfile   Flask   docker-commands-info   java-app   python   python-app
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/docker$ cd python-app/
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/docker/python-app$ cd docker
+-bash: cd: docker: No such file or directory
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/docker/python-app$ cd Docker
+-bash: cd: Docker: No such file or directory
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/docker/python-app$ docker login
+
+The command 'docker' could not be found in this WSL 2 distro.
+We recommend to activate the WSL integration in Docker Desktop settings.
+
+For details about using Docker Desktop with WSL 2, visit:
+
+https://docs.docker.com/go/wsl2/
+
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/docker/python-app$ docker login
+Authenticating with existing credentials... [Username: srividyadharikaza]
+
+i Info → To login with a different account, run 'docker logout' followed by 'docker login'
+
+
+Login Succeeded
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/docker/python-app$ docker build -t my-python-app:1.0 .
+[+] Building 3.3s (10/10) FINISHED                                                                                                   docker:default
+ => [internal] load build definition from Dockerfile                                                                                           0.0s
+ => => transferring dockerfile: 180B                                                                                                           0.0s 
+ => [internal] load metadata for docker.io/library/python:3.8-slim                                                                             2.5s
+ => [auth] library/python:pull token for registry-1.docker.io                                                                                  0.0s
+ => [internal] load .dockerignore                                                                                                              0.0s
+ => => transferring context: 2B                                                                                                                0.0s 
+ => [1/4] FROM docker.io/library/python:3.8-slim@sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f                       0.0s 
+ => => resolve docker.io/library/python:3.8-slim@sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f                       0.0s 
+ => [internal] load build context                                                                                                              0.0s 
+ => => transferring context: 154B                                                                                                              0.0s 
+ => CACHED [2/4] WORKDIR /app                                                                                                                  0.0s
+ => CACHED [3/4] COPY . /app                                                                                                                   0.0s 
+ => CACHED [4/4] RUN pip install --no-cache-dir -r requirements.txt                                                                            0.0s 
+ => exporting to image                                                                                                                         0.3s 
+ => => exporting layers                                                                                                                        0.0s 
+ => => exporting manifest sha256:3a2057af44a5062abf031630d9afc293ab7281d3f716d85f1d6c8d0d6cd327bd                                              0.0s 
+ => => exporting config sha256:7034f9e49e00805308dde82fd08fd236d274cad30ed74e7c0e9b80cb37de868e                                                0.0s 
+ => => exporting attestation manifest sha256:857aa8bb649679fdb3bbfdbf428a7f8ae49e3eea07394feea45652b0a537f42c                                  0.1s 
+ => => exporting manifest list sha256:cb2e342b70efc10bf6c4ac200ea1d89da26a038b37d667e3e4354ac79346202d                                         0.0s 
+ => => naming to docker.io/library/my-python-app:1.0                                                                                           0.0s
+ => => unpacking to docker.io/library/my-python-app:1.0                                                                                        0.0s 
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/docker/python-app$ docker tag my-python-app srividyadharikaza/python:
+latest
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/docker/python-app$ docker push srividyadharikaza/python:latest       
+The push refers to repository [docker.io/srividyadharikaza/python]
+030d7bdc20a6: Pushed
+a3f1dfe736c5: Pushed
+7972f45899bb: Pushed
+aafd853869af: Pushed 
+3971691a3637: Pushed
+563efd9434b4: Pushed
+302e3ee49805: Pushed
+c8c36d16625a: Pushed
+latest: digest: sha256:636e4f853f2fa81541e172fc5ff0bc930f15fac03ea77c412dd352a67122ff26 size: 856
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/docker/python-app$ docker images
+REPOSITORY                 TAG        IMAGE ID       CREATED        SIZE
+java-app                   latest     bd47152717dd   2 days ago     1.03GB
+my-python-app              latest     636e4f853f2f   2 days ago     205MB
+srividyadharikaza/python   latest     636e4f853f2f   2 days ago     205MB
+my-python-app              1.0        cb2e342b70ef   2 days ago     205MB
+flask-sample-app           latest     4074ecfcc198   5 days ago     206MB
+nginx                      latest     84ec966e61a8   3 weeks ago    279MB
+python                     3.9-slim   4b826e2ca219   2 months ago   189MB
+hello-world                latest     ec153840d1e6   6 months ago   20.4kB
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/docker/python-app$

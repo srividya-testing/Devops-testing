@@ -1,0 +1,29 @@
+pushing java image to docker Hub
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/docker$ cd java-app/
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/docker/java-app$ docker images
+REPOSITORY                        TAG        IMAGE ID       CREATED        SIZE
+java-app                          latest     bd47152717dd   2 days ago     1.03GB
+my-python-app                     1.0        cb2e342b70ef   2 days ago     205MB
+srividyadharikaza/python          latest     636e4f853f2f   2 days ago     205MB
+my-python-app                     latest     636e4f853f2f   2 days ago     205MB
+srividyadharikaza/my-python-app   1.0        636e4f853f2f   2 days ago     205MB
+flask-sample-app                  latest     4074ecfcc198   5 days ago     206MB
+nginx                             latest     84ec966e61a8   3 weeks ago    279MB
+python                            3.9-slim   4b826e2ca219   2 months ago   189MB
+hello-world                       latest     ec153840d1e6   6 months ago   20.4kB
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/docker/java-app$ docker tag java-app srividyadharikaza/java-app:1.0  
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/docker/java-app$ docker push srividyadharikaza/java-app:1.0
+The push refers to repository [docker.io/srividyadharikaza/java-app]
+8509c651e30d: Pushed
+001c52e26ad5: Pushed
+2068746827ec: Pushed
+d85151f15b66: Pushed
+66223a710990: Pushed
+db38d58ec8ab: Pushed
+d9d4b9b6e964: Pushed
+9daef329d350: Pushed
+eb006cb6e83d: Pushed
+e32a7b2c62c4: Pushed
+05be5dee0b47: Pushed
+1.0: digest: sha256:bd47152717dd0188841e6dfb48710b4f4d440c9ebe1a085b765d0c6c4dfdc1e3 size: 856
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/docker/java-app$ 

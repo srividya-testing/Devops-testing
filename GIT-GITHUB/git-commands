@@ -17,3 +17,15 @@ git diff ------------------------ show changes
 git reset HEAD~1 ---------------- undo last commit
 git stash ----------------------- stash changes
 git stash pop ------------------- apply stashed changes
+Delete remote branch
+git push origin --delete <branch-name>
+Alternative syntax
+git push origin :<branch-name>
+
+# Clean up stale remote references
+git fetch origin --prune
+
+# List all remote branches
+git branch -r
+
+# List all branches (local + remote)
