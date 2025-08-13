@@ -1,0 +1,1 @@
+Console.WriteLine("Hello, Docker with .NET!"); // Add this line to program.cs

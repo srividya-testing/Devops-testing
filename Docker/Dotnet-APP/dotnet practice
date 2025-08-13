@@ -1,0 +1,267 @@
+cdrinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$ sudo apt-get update && sudo apt-get install -y wget apt-transport-https
+[sudo] password for rinivas: 
+Hit:1 https://download.docker.com/linux/ubuntu noble InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+Get:3 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [164 kB]
+Get:7 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [21.6 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [377 kB]
+Get:9 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [52.2 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+Get:11 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+Get:12 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [7060 B]
+Get:13 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [30.7 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+Get:15 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+Get:16 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Components [212 B]
+Get:17 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [208 B]
+Fetched 1033 kB in 2s (440 kB/s)    
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+wget is already the newest version (1.21.4-1ubuntu4.1).
+wget set to manually installed.
+The following additional packages will be installed:
+  apt apt-utils libapt-pkg6.0t64
+Suggested packages:
+  apt-doc aptitude | synaptic | wajig dpkg-dev powermgmt-base
+The following NEW packages will be installed:
+  apt-transport-https
+The following packages will be upgraded:
+  apt apt-utils libapt-pkg6.0t64
+3 upgraded, 1 newly installed, 0 to remove and 72 not upgraded.
+Need to get 2580 kB of archives.
+After this operation, 47.1 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libapt-pkg6.0t64 amd64 2.8.3 [985 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apt amd64 2.8.3 [1376 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apt-utils amd64 2.8.3 [216 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 apt-transport-https all 2.8.3 [3970 B]
+Fetched 2580 kB in 2s (1046 kB/s)
+(Reading database ... 40769 files and directories currently installed.)
+Preparing to unpack .../libapt-pkg6.0t64_2.8.3_amd64.deb ...
+Unpacking libapt-pkg6.0t64:amd64 (2.8.3) over (2.7.14build2) ...
+Setting up libapt-pkg6.0t64:amd64 (2.8.3) ...
+(Reading database ... 40769 files and directories currently installed.)
+Preparing to unpack .../archives/apt_2.8.3_amd64.deb ...
+Unpacking apt (2.8.3) over (2.7.14build2) ...
+Setting up apt (2.8.3) ...
+(Reading database ... 40769 files and directories currently installed.)
+Preparing to unpack .../apt-utils_2.8.3_amd64.deb ...
+Unpacking apt-utils (2.8.3) over (2.7.14build2) ...
+Selecting previously unselected package apt-transport-https.
+Preparing to unpack .../apt-transport-https_2.8.3_all.deb ...
+Unpacking apt-transport-https (2.8.3) ...
+Setting up apt-utils (2.8.3) ...
+Setting up apt-transport-https (2.8.3) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.5) ...
+/sbin/ldconfig.real: /usr/lib/wsl/lib/libcuda.so.1 is not a symbolic link
+
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$ sudo apt-get update && sudo apt-get install -y wget apt-transport-https
+Hit:1 https://download.docker.com/linux/ubuntu noble InRelease
+0% [Waiting for headers] [Waiting for headers]                                                             
+Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:5 http://security.ubuntu.com/ubuntu noble-security InRelease
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+wget is already the newest version (1.21.4-1ubuntu4.1).
+apt-transport-https is already the newest version (2.8.3).
+0 upgraded, 0 newly installed, 0 to remove and 72 not upgraded.
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$  wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
+--2025-08-13 06:00:51--  https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb
+Resolving packages.microsoft.com (packages.microsoft.com)... 13.107.246.58, 2620:1ec:bdf::58
+Connecting to packages.microsoft.com (packages.microsoft.com)|13.107.246.58|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4308 (4.2K) [application/octet-stream]
+Saving to: ‘packages-microsoft-prod.deb’
+
+packages-microsoft-prod.deb         100%[================================================================>]   4.21K  --.-KB/s    in 0s       
+
+2025-08-13 06:00:51 (302 MB/s) - ‘packages-microsoft-prod.deb’ saved [4308/4308]
+
+Selecting previously unselected package packages-microsoft-prod.
+(Reading database ... 40773 files and directories currently installed.)
+Preparing to unpack packages-microsoft-prod.deb ...
+Unpacking packages-microsoft-prod (1.2-ubuntu22.04) ...
+Setting up packages-microsoft-prod (1.2-ubuntu22.04) ...
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$ sudo apt-get update && sudo apt-get install -y dotnet-sdk-8.0
+Hit:1 https://download.docker.com/linux/ubuntu noble InRelease
+Get:2 https://packages.microsoft.com/ubuntu/22.04/prod jammy InRelease [3632 B]
+Get:3 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main armhf Packages [20.7 kB]
+Hit:4 http://archive.ubuntu.com/ubuntu noble InRelease
+Get:5 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 Packages [240 kB]
+Get:6 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main arm64 Packages [75.6 kB] 
+Get:7 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main all Packages [1331 B]
+Hit:8 http://archive.ubuntu.com/ubuntu noble-updates InRelease       
+Hit:9 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:10 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Fetched 341 kB in 1s (398 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  aspnetcore-runtime-8.0 aspnetcore-targeting-pack-8.0 dotnet-apphost-pack-8.0 dotnet-host dotnet-hostfxr-8.0 dotnet-runtime-8.0
+  dotnet-runtime-deps-8.0 dotnet-targeting-pack-8.0 netstandard-targeting-pack-2.1
+The following NEW packages will be installed:
+  aspnetcore-runtime-8.0 aspnetcore-targeting-pack-8.0 dotnet-apphost-pack-8.0 dotnet-host dotnet-hostfxr-8.0 dotnet-runtime-8.0
+  dotnet-runtime-deps-8.0 dotnet-sdk-8.0 dotnet-targeting-pack-8.0 netstandard-targeting-pack-2.1
+0 upgraded, 10 newly installed, 0 to remove and 72 not upgraded.
+Need to get 143 MB of archives.
+After this operation, 589 MB of additional disk space will be used.
+Get:1 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 dotnet-host amd64 9.0.4-1 [36.7 kB]
+Get:2 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 dotnet-hostfxr-8.0 amd64 8.0.19-1 [108 kB]
+Get:3 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 dotnet-runtime-deps-8.0 amd64 8.0.19-1 [2894 B]
+Get:4 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 dotnet-runtime-8.0 amd64 8.0.19-1 [23.1 MB]
+Get:5 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 aspnetcore-runtime-8.0 amd64 8.0.19-1 [7719 kB]
+Get:6 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 dotnet-targeting-pack-8.0 amd64 8.0.19-1 [2800 kB]
+Get:7 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 aspnetcore-targeting-pack-8.0 amd64 8.0.19-1 [1944 kB]
+Get:8 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 dotnet-apphost-pack-8.0 amd64 8.0.19-1 [3519 kB]                     
+Get:9 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 netstandard-targeting-pack-2.1 amd64 2.1.0-1 [1476 kB]
+Get:10 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 dotnet-sdk-8.0 amd64 8.0.413-1 [102 MB]                             
+Fetched 143 MB in 23s (6122 kB/s)                                                                                                            
+Selecting previously unselected package dotnet-host.
+(Reading database ... 40790 files and directories currently installed.)
+Preparing to unpack .../0-dotnet-host_9.0.4-1_amd64.deb ...
+Unpacking dotnet-host (9.0.4-1) ...
+Selecting previously unselected package dotnet-hostfxr-8.0.
+Preparing to unpack .../1-dotnet-hostfxr-8.0_8.0.19-1_amd64.deb ...
+Unpacking dotnet-hostfxr-8.0 (8.0.19-1) ...
+Selecting previously unselected package dotnet-runtime-deps-8.0.
+Preparing to unpack .../2-dotnet-runtime-deps-8.0_8.0.19-1_amd64.deb ...
+Unpacking dotnet-runtime-deps-8.0 (8.0.19-1) ...
+Selecting previously unselected package dotnet-runtime-8.0.
+Preparing to unpack .../3-dotnet-runtime-8.0_8.0.19-1_amd64.deb ...
+Unpacking dotnet-runtime-8.0 (8.0.19-1) ...
+Selecting previously unselected package aspnetcore-runtime-8.0.
+Preparing to unpack .../4-aspnetcore-runtime-8.0_8.0.19-1_amd64.deb ...
+Unpacking aspnetcore-runtime-8.0 (8.0.19-1) ...
+Selecting previously unselected package dotnet-targeting-pack-8.0.
+Preparing to unpack .../5-dotnet-targeting-pack-8.0_8.0.19-1_amd64.deb ...
+Unpacking dotnet-targeting-pack-8.0 (8.0.19-1) ...
+Selecting previously unselected package aspnetcore-targeting-pack-8.0.
+Preparing to unpack .../6-aspnetcore-targeting-pack-8.0_8.0.19-1_amd64.deb ...
+Unpacking aspnetcore-targeting-pack-8.0 (8.0.19-1) ...
+Selecting previously unselected package dotnet-apphost-pack-8.0.
+Preparing to unpack .../7-dotnet-apphost-pack-8.0_8.0.19-1_amd64.deb ...
+Unpacking dotnet-apphost-pack-8.0 (8.0.19-1) ...
+Selecting previously unselected package netstandard-targeting-pack-2.1.
+Preparing to unpack .../8-netstandard-targeting-pack-2.1_2.1.0-1_amd64.deb ...
+Unpacking netstandard-targeting-pack-2.1 (2.1.0-1) ...
+Selecting previously unselected package dotnet-sdk-8.0.
+Preparing to unpack .../9-dotnet-sdk-8.0_8.0.413-1_amd64.deb ...
+Unpacking dotnet-sdk-8.0 (8.0.413-1) ...
+Setting up dotnet-host (9.0.4-1) ...
+Setting up dotnet-targeting-pack-8.0 (8.0.19-1) ...
+Setting up netstandard-targeting-pack-2.1 (2.1.0-1) ...
+Setting up aspnetcore-targeting-pack-8.0 (8.0.19-1) ...
+Setting up dotnet-apphost-pack-8.0 (8.0.19-1) ...
+Setting up dotnet-runtime-deps-8.0 (8.0.19-1) ...
+Setting up dotnet-hostfxr-8.0 (8.0.19-1) ...
+Setting up dotnet-runtime-8.0 (8.0.19-1) ...
+Setting up aspnetcore-runtime-8.0 (8.0.19-1) ...
+Setting up dotnet-sdk-8.0 (8.0.413-1) ...
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$ donet --version
+
+Command 'donet' not found, did you mean:
+  command 'dotnet' from snap dotnet (9.0.8)
+  command 'dotnet' from snap dotnet-sdk (8.0.407)
+  command 'dotnet' from deb dotnet-host-8.0 (8.0.14-0ubuntu1~24.04.1)
+See 'snap info <snapname>' for additional versions.
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$ 
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$ dotnet --version
+8.0.413
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$ docker build -t dotnetapp . 
+[+] Building 9.8s (13/13) FINISHED                                                                                            docker:default
+ => [internal] load build definition from Dockerfile                                                                                    0.0s
+ => => transferring dockerfile: 357B                                                                                                    0.0s 
+ => [internal] load metadata for mcr.microsoft.com/dotnet/runtime:8.0                                                                   0.3s 
+ => [internal] load metadata for mcr.microsoft.com/dotnet/sdk:8.0                                                                       0.2s 
+ => [internal] load .dockerignore                                                                                                       0.0s
+ => => transferring context: 2B                                                                                                         0.0s 
+ => [build 1/4] FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:7fd287cec03e027e39be13fb06ca1347f1338c7a6ab4ad305d94d91852693f70           0.1s 
+ => => resolve mcr.microsoft.com/dotnet/sdk:8.0@sha256:7fd287cec03e027e39be13fb06ca1347f1338c7a6ab4ad305d94d91852693f70                 0.0s 
+ => [stage-1 1/3] FROM mcr.microsoft.com/dotnet/runtime:8.0@sha256:62d1c7b172a4c254fc48096a29375971859e7dc1b687f9dd8fa699cfab80409a     0.0s 
+ => => resolve mcr.microsoft.com/dotnet/runtime:8.0@sha256:62d1c7b172a4c254fc48096a29375971859e7dc1b687f9dd8fa699cfab80409a             0.0s 
+ => [internal] load build context                                                                                                       0.1s
+ => => transferring context: 185B                                                                                                       0.0s
+ => CACHED [stage-1 2/3] WORKDIR /app                                                                                                   0.0s 
+ => CACHED [build 2/4] WORKDIR /src                                                                                                     0.0s 
+ => [build 3/4] COPY . .                                                                                                                0.1s 
+ => [build 4/4] RUN dotnet publish -c Release -o /app/publish                                                                           8.1s
+ => [stage-1 3/3] COPY --from=build /app/publish .                                                                                      0.1s
+ => exporting to image                                                                                                                  0.6s
+ => => exporting layers                                                                                                                 0.3s
+ => => exporting manifest sha256:a9570706d0af0c72569e016f7389a484b31d635f017b71835eda93a81ca2077f                                       0.0s
+ => => exporting config sha256:ccc5757d2456e781689b26ac55bc7637447ece88f00f42fb552c26c9647c5444                                         0.0s
+ => => exporting attestation manifest sha256:8b75fa2bd863f04ad5e7b3c46a060d50f7ab95ecb57d1a073b5dea5b7e29e88e                           0.0s 
+ => => exporting manifest list sha256:78cba8c127b13e33b9a13983ffea3663a994c0d952313d3611bb2b88e95eab3f                                  0.0s 
+ => => naming to docker.io/library/dotnetapp:latest                                                                                     0.0s
+ => => unpacking to docker.io/library/dotnetapp:latest                                                                                  0.1s 
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$ 
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$ docker run -d dotnetapp
+9330b79c913477e16d9eec5d717df995a3bb711dd6df4b8e86c1ee19ce4d4e44
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$ docker logs dotnetapp
+Error response from daemon: No such container: dotnetapp
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$ docker ps -a
+CONTAINER ID   IMAGE              COMMAND                  CREATED          STATUS                      PORTS                    NAMES
+9330b79c9134   dotnetapp          "dotnet dotnet-app.d…"   45 seconds ago   Exited (0) 43 seconds ago                            busy_goldwasser
+ed510508c077   nginx              "/docker-entrypoint.…"   6 days ago       Exited (255) 5 days ago     80/tcp                   epic_hugle
+a960d226a8c4   nginx              "/docker-entrypoint.…"   6 days ago       Exited (0) 6 days ago                                goofy_joliot
+e5957833782a   java-app           "java App"               7 days ago       Exited (0) 7 days ago                                upbeat_moore
+0c554b1c3e69   java-app           "java App"               7 days ago       Exited (0) 7 days ago                                my-java
+50568a1fe752   java-app           "java App"               7 days ago       Exited (0) 7 days ago                                sharp_keldysh
+17e5be9825d8   my-python-app      "python app.py"          7 days ago       Exited (1) 7 days ago                                my-python
+36932f7a72ab   my-python-app      "python app.py"          7 days ago       Exited (1) 7 days ago                                hardcore_bohr
+011a66b440fd   my-python-app      "python app.py"          7 days ago       Created                                              charming_williams
+2d6ca546054d   my-python-app      "python app.py"          7 days ago       Created                                              awesome_albattani
+abc7f5ad366d   nginx              "/docker-entrypoint.…"   7 days ago       Exited (0) 7 days ago                                my-mynginx
+cb2882b67f0b   nginx              "/docker-entrypoint.…"   7 days ago       Exited (0) 7 days ago                                my-nginx
+e7be08b8a4f9   nginx              "/docker-entrypoint.…"   7 days ago       Exited (0) 7 days ago                                sleepy_lumiere
+825b1d020671   flask-sample-app   "python app.py"          9 days ago       Exited (255) 8 days ago     0.0.0.0:5000->5000/tcp   intelligent_mcnulty
+77b0a42af5e3   7985ed85ae6a       "python app.py"          9 days ago       Exited (0) 9 days ago                                inspiring_mcclintock
+a89dada198af   7985ed85ae6a       "python app.py"          9 days ago       Exited (0) 9 days ago                                modest_lalande
+cb81a9e718f2   7985ed85ae6a       "python app.py"          9 days ago       Exited (0) 9 days ago                                unruffled_tu
+a078d5145bed   8fdf429101ab       "python app.py"          9 days ago       Exited (1) 9 days ago                                inspiring_grothendieck
+e0af83f18023   hello-world        "/hello"                 11 days ago      Exited (0) 11 days ago                               trusting_feistel
+6b169114cfee   hello-world        "/hello"                 12 days ago      Exited (0) 12 days ago                               determined_boyd
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$ docker logs 9330b79c9134
+Hello, Docker with .NET!
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$ pwd
+/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$ cd Docker
+-bash: cd: Docker: No such file or directory
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$ docker login
+Authenticating with existing credentials... [Username: srividyadharikaza]
+
+i Info → To login with a different account, run 'docker logout' followed by 'docker login'
+
+Login Succeeded
+
+
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$ docker tag dotnetapp srividyadharikaza/devops-testing-repo:v1.0
+rinivas@LAPTOP-P5HA55D7:/mnt/d/vidya devops practical/DEVOPS-REALTIME-PROJECTS/Docker/Dotnet-APP$ docker push srividyadharikaza/devops-testing-repo:v1.0
+The push refers to repository [docker.io/srividyadharikaza/devops-testing-repo]
+f80800a8d327: Pushed
+3d7b003b41ca: Pushed
+16bf5aa6abcc: Pushed
+8824f6aeff37: Pushed 
+2b6f82574228: Pushed
+b1badc6e5066: Pushed
+ad3066ffb8bc: Pushed
+d58a7b951b05: Pushed
+v1.0: digest: sha256:78cba8c127b13e33b9a13983ffea3663a994c0d952313d3611bb2b88e95eab3f size: 856
+
+to push to ecr:
